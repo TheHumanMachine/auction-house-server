@@ -6,7 +6,11 @@ const port = process.env.port || 3000;
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send("Hello, World! Now with CORS!");
+    res.send("Front End");
+});
+
+app.get('/api/test', (req, res) => {
+    res.send("test api endpoint!");
 });
 
 app.listen(port, () => {
